@@ -19,7 +19,7 @@ export default function CharactersList() {
   const [selectedCharacter, setSelectedCharacter] = useState(null);
   const [filteredCharacters, setFilteredCharacters] = useState([]);
 
-  // Update filteredCharacters when data or searchInput changes
+  // updating filteredCharacters when filtered
   useEffect(() => {
     if (data) {
       const filtered = data.characters.results.filter(character =>
@@ -29,7 +29,7 @@ export default function CharactersList() {
     }
   }, [data, searchInput]);
 
-  // Effect to auto-select the last item when items are filtered
+  // auto selected item effect.
   useEffect(() => {
     if (filteredCharacters.length > 0) {
       setSelectedCharacter(filteredCharacters[filteredCharacters.length - 1]);
@@ -38,10 +38,12 @@ export default function CharactersList() {
     }
   }, [filteredCharacters]);
 
+  //checking if the items are loading or not
   if (loading) return <div>spinner</div>
+  //checking if any error has occured when loading
   if (error) return <div>something went wrong</div>
 
-  // Handle selecting or deselecting a character
+  // selection handling
   const handleSelectCharacter = (character) => {
     setSelectedCharacter(character);
   }
