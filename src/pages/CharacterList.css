@@ -1,0 +1,44 @@
+/* CharacterList.css */
+
+.CharacterList {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.CharacterList input[type="text"] {
+  width: 99%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.CharacterList div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.CharacterList input[type="radio"] {
+  margin-right: 10px;
+}
+
+.CharacterList label {
+  font-size: 18px;
+}
+
+.CharacterList h3 {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.CharacterList p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.selected {
+  background-color: lightblue; /* Change to the desired background color */
+  color: #000; /* Change to the desired text color */
+}
